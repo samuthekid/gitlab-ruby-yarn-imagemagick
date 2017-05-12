@@ -14,7 +14,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 # Install everything we need
 RUN apt-get update \
-    && apt-get install -y apt-transport-https ca-certificates docker-engine gnupg2 libfontconfig nodejs openssh-client yarn \
+    && apt-get install -y apt-transport-https ca-certificates docker-engine imagemagick libmagickwand-dev libfontconfig nodejs openssh-client yarn \
     && ln -f -s /usr/bin/nodejs /usr/bin/node
 
 # Install global Gulp

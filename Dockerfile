@@ -2,7 +2,7 @@ FROM ruby:2.4
 
 # Add global dependencies
 RUN apt-get update \
-    && apt-get install -y apt-transport-https ca-certificates imagemagick libmagickwand-dev libfontconfig openssh-client
+    && apt-get install -y apt-transport-https ca-certificates imagemagick libmagickwand-dev libfontconfig openssh-client rsync
 
 # Add Docker engine
 RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D \

@@ -23,9 +23,6 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && apt-get update \
     && apt-get install -y yarn
 
-# Install global Gulp
-RUN yarn global add gulp
-
 # Slim down image
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*

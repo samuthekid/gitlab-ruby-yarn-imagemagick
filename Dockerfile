@@ -5,6 +5,9 @@ FROM ruby:2.5.1
 RUN apt-get update \
     && apt-get install -y apt-transport-https ca-certificates imagemagick libmagickwand-dev libfontconfig rsync
 
+RUN apt-get update \
+    && apt-get install -y openssh-client
+
 RUN \
     curl -sL https://deb.nodesource.com/setup_9.x | bash - && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
